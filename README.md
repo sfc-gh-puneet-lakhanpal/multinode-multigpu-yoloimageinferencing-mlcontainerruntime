@@ -23,6 +23,8 @@ This repo shows how we can use ML Container runtime to perform multi-node, multi
 5. Run `Yolo object detection - Distributed Inferencing.ipynb` and that notebook will create a Ray cluster scaled upto 5 nodes, run distributed multi-node, multi-GPU object detection and write data to Snowflake using Snowflake APIs.
 
 ### Future Planned updates
-I am waiting to hear back from engineering if multi node HPO has come into prod. Yolo also integrates with Ray for distributed multi node HPO, and I plan to update this repo after testing multi node HPO in prod. 
+1. I am waiting to hear back from engineering if multi node HPO has come into prod. Yolo also integrates with Ray for distributed multi node HPO, and I plan to update this repo after testing multi node HPO in prod.  See here: https://docs.ultralytics.com/integrations/ray-tune/
 
-See here: https://docs.ultralytics.com/integrations/ray-tune/
+2. Have to figure out Ray logging. It keeps spitting out inferencing in INFO. Need to suppress logs.
+
+3. I know Michael Gorkow & Carlos Carrerro are going to ask me for adding github integration in this repo. Lets save that for a Partner Solution Engineering (PSE) quickstart :)
