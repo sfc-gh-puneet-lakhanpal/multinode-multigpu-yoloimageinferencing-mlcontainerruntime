@@ -2,6 +2,19 @@
 
 This repo shows how we can use ML Container runtime to perform multi-node, multi-gpu Yolo object detection over multiple image files in a snowflake stage. In this demo, we use a GPU compute pool with 5 GPU_NV_S nodes and use Yolo11 pretrained model, which is trained first on a single GPU_NV_S node and then leveraged to perform multi node, multi gpu inferencing.
 
+```In this code, 4952 object detections were performed within 1 min and 23 seconds on a 5 node GPU_NV_S cliuster.```
+
+### Screenshots
+
+![Code](images/distributed_multinode_code.png?raw=true "Code")
+
+![Sample Input](images/sample_input.png?raw=true "Sample image input")
+
+![Sample Image Output](images/output.png?raw=true "Output")
+
+![Image Count](images/image_count.png?raw=true "Image Count")
+
+
 ### Setup instructions
 1. Run `step0_setup.sql` to setup basic objects.
 2. Import `Yolo object detection - Distributed Inferencing Setup.ipynb` as a container based Snowflake notebook, select a warehouse and choose `object_detection_cp_gpu_nv_s_data_download` compute pool created in the above step. Use the external access integration `allow_all_integration` which will download the audio files.
